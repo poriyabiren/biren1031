@@ -136,7 +136,7 @@
 			dataType: "json",
 			success: function(response){
 				orgId = response.org;
-				clientId = "d:"+orgId+":"+response.deviceType+":"+response.patientId;
+				clientId = "d:"+orgId+":"+response.deviceType+":"+response.deviceId;
 				password = response.token;
 
 				client = new Paho.MQTT.Client(orgId+".messaging.internetofthings.ibmcloud.com", 1883, clientId);
