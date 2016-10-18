@@ -54,7 +54,7 @@
 
 	//Prompt to patient to enter patient id on start of appliacation
 	function getPatientId() {
-		window.deviceId = prompt("Enter your patient ID (least 8 characters containing only letters and numbers):");
+		window.patientId = prompt("Enter your patient ID (least 8 characters containing only letters and numbers):");
 		if (window.patientId) {
 			$("#patientId").html(window.patientId);
 			getDeviceCredentials();
