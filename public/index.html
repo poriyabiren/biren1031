@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IoT Phone</title>
+  <link rel='stylesheet' href='./stylesheets/style.css'/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+	<script type="text/javascript">
+		window.patientId = "myphone";
+	</script>
+	
+	<section class="main">
+		<div id="main" class="content">
+			<h1>Your Patient ID:</h1>
+			<h2><span id="patientId"></span></h2>
+			<p style="padding-top:10px">
+    			<img id="connectionImage" src="./images/disconnected.svg" class="connected-icon">
+    			<span id="connection">Disconnected</span>
+			</p>
+		</div>
+		<div class="content">
+			<table class="data-table">
+				<tr class="table-title">
+					<th colspan="2">Your Location</th>
+				</tr>
+				<tr class="data-title">
+					<th>Latitude</th>
+					<th>Longitude</th>
+				</tr>
+				<tr>
+					<td id="lat">0</td>
+					<td id="lng">0</td>
+				</tr>
+			</table>
+		</div>
+		<div class="content">Your Speed : 30</div>
+		<div class="bottom-space"></div>
+	</section>
+	<!-- Please do not change the order of these links as some depend on each other -->
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/mqttws31.js"></script>
+	<script type="text/javascript" src="/js/util.js"></script>
+	<script type="text/javascript" src="/js/geolib.min.js"></script>
+	<script type="text/javascript" src="/js/device.js"></script>
+</body>
+</html>
